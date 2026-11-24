@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: CLIENT_GITHUB_OWNER/CLIENT_REPOSITORY
+  branch: main
+media_folder: public/assets/talents
+public_folder: /assets/talents
+publish_mode: editorial_workflow
+collections:
+  - name: directory
+    label: Talent directory
+    files:
+      - name: talents
+        label: Talents
+        file: public/talents.json
+        fields:
+          - name: talents
+            label: Talents
+            widget: list
+            fields:
+              - { name: id, label: Unique ID, widget: string }
+              - { name: name, label: Name, widget: string }
+              - { name: published, label: Approved for publication, widget: boolean, default: false }
+              - { name: category, label: Category, widget: select, options: [sport, creators] }
+              - { name: discipline, label: Sport or content category, widget: string }
+              - { name: photo, label: Approved photograph, widget: image }
+              - { name: bio, label: Biography, widget: text }
+              - { name: details, label: Career and achievements or social channels and work examples, widget: text }

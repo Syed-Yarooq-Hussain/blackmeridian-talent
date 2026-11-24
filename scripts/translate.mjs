@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+const source=JSON.parse(await fs.readFile('public/locales/de.json','utf8'));
+const languages=['en','tr','pl','ro','sq','es','fr','el','uk','bg','it'];
+for(const lang of languages){let out={};const entries=Object.entries(source);for(let i=0;i<entries.length;i+=10){const batch=entries.slice(i,i+10);const query=batch.map(([k,v])=>v.replaceAll('\n',' ')).join('\n');const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl='+lang+'&dt=t&q='+encodeURIComponent(query);const res=await fetch(url);if(!res.ok)throw Error(lang+' '+res.status);const data=await res.json();const lines=data[0].map(x=>x[0]).join('').split('\n');if(lines.length!==batch.length)throw Error('Translation count '+lang+' '+i);batch.forEach(([k],j)=>out[k]=lines[j].trim());}await fs.writeFile(`public/locales/${lang}.json`,JSON.stringify(out,null,2));console.log(lang,Object.keys(out).length);}

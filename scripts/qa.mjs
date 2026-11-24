@@ -1,0 +1,9 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await fs.mkdir('artifacts',{recursive:true});
+for(const width of [1440,768,390]){await page.setViewportSize({width,height:1000});await page.goto('http://127.0.0.1:5173/?lang=de');await page.locator('h1').waitFor();await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:`artifacts/home-${width}.png`,fullPage:true});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Overflow '+width);}
+await page.locator('[data-tab=business]').click();await page.locator('[name=name]').fill('QA Test');await page.locator('[name=email]').fill('test@example.com');await page.locator('[name=project]').fill('Test inquiry');await page.locator('[name=consent]').check();await page.locator('[type=submit]').click();if(!(await page.locator('.form-status').innerText()).includes('nicht gesendet'))throw Error('False success');
+for(const lang of ['de','en','tr','pl','ro','sq','es','fr','el','uk','bg','it']){await page.goto(`http://127.0.0.1:5173/?lang=${lang}`);await page.locator('h1').waitFor();if(await page.locator('html').getAttribute('lang')!==lang)throw Error('Language '+lang);if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Locale overflow '+lang);console.log(lang,'OK');}
+if(errors.length)throw Error(errors.join('\n'));await browser.close();console.log('Desktop, tablet, mobile, twelve languages, form state: passed');

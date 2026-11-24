@@ -1,0 +1,24 @@
+{
+  "name": "black-meridian-talent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node scripts/qa.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "@playwright/test": "^1.65.1",
+    "pdfjs-dist": "^6.5.438"
+  },
+  "devDependencies": {
+    "vite": "^6.4.6"
+  }
+}
