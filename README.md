@@ -16,6 +16,8 @@ Separate talent-management website. No Sales & Consulting source was modified.
 
 ## Design and references
 
+The original BM monogram and complete Black Meridian Talent Management logo from the supplied PDF are used in the header and footer. `public/assets/black-meridian-original.png` is the unchanged PDF page rendering; CSS crops its original artwork for placement, with no retyping or AI regeneration. The decorative about and empty-directory marks use the same original monogram.
+
 Palette derived from the supplied Black Meridian PDF: eggshell `#eee9df`, near-black `#20211f`, burgundy `#4b1024`. Locally hosted Manrope and Cormorant Garamond; serif display headlines and restrained editorial layouts. LYN informs the photography-first structure, service discovery and distinct talent/brand inquiry paths: https://lyntheagency.de/. The Digital Dept reference could not be retrieved during research.
 
 Photography is illustrative, with an explicit non-representation caption:

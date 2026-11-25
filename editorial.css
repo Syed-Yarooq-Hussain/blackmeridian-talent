@@ -73,6 +73,17 @@ footer{background:var(--wine)}
 .button:hover{background:#651a34;color:var(--paper)}
 .logo small{font-size:10px;letter-spacing:3px}
 .menu{color:inherit}
+.logo .original-logo{display:block;position:relative;width:174px;height:132px;overflow:hidden;mix-blend-mode:lighten}
+.original-logo img{position:absolute;display:block;width:274.74px;max-width:none;height:auto;left:-50.37px;top:-61.82px}
+header{height:158px}
+.footer-top .logo .original-logo{width:250px;height:190px}
+.footer-top .original-logo img{width:394.74px;left:-72.37px;top:-88.82px}
+.original-monogram{position:relative;display:block;overflow:hidden;width:100px;height:88px;mix-blend-mode:lighten}
+.original-monogram img{position:absolute;width:240px;height:auto;max-width:none;left:-70px;top:-54px}
+.about .original-monogram{position:absolute;width:300px;height:264px;opacity:.07;top:25px;right:25px}
+.about .original-monogram img{width:720px;left:-210px;top:-162px}
+.empty-symbol.original-monogram{margin:0 auto 20px}
+@media(max-width:800px){header{height:134px}nav{top:134px}.logo .original-logo{width:145px;height:110px}.original-logo img{width:228.95px;left:-41.97px;top:-51.53px}.footer-top .logo .original-logo{width:220px;height:167px}.footer-top .original-logo img{width:347.37px;left:-63.68px;top:-78.16px}.about .original-monogram{width:220px;height:194px}.about .original-monogram img{width:528px;left:-154px;top:-118.8px}}
 .about .about-photo-note{font-size:12px;line-height:1.6}
 .menu{color:inherit}
 .about .about-photo-note{font-size:12px;line-height:1.6}
@@ -80,3 +91,5 @@ footer{background:var(--wine)}
 @media(max-width:800px){header{height:85px}.logo small{font-size:7px;letter-spacing:2px}nav{background:var(--ink);color:var(--paper)}.hero{padding:25px 5% 22px}.hero h1{font-size:clamp(51px,10vw,78px);line-height:1.02;letter-spacing:-2px;margin:25px 0}.hero-bottom{margin-bottom:25px}.hero-bottom p{max-width:none;font-size:15px}.hero .duo{gap:10px}.hero .photo{height:300px}.photo>div{left:14px;right:10px;bottom:18px}.photo h2{font-size:clamp(28px,6vw,42px)}.caption{font-size:11px}.section{padding:60px 6%}.about{gap:25px}.about-copy{gap:22px}.about-copy .lead{font-size:20px}.about-photography{gap:12px;grid-template-columns:1fr 1fr}.about-photography .editorial-image{height:280px}.editorial-image figcaption{bottom:15px;left:14px;right:12px;font-size:12px}.about-photography .editorial-image:first-child img{object-position:65% center}.services .section-head{grid-template-columns:1fr}.services-body{grid-template-columns:1fr;gap:35px}.service-photography{gap:12px}.service-photography .editorial-image{height:290px}.service-photography .editorial-image:nth-child(2){margin-top:35px}summary{font-size:29px}.brands{grid-template-columns:1fr;gap:35px}.brand-photography{gap:12px}.brand-photography .editorial-image{height:280px}.brand-photography figcaption{font-size:30px}.empty h3{font-size:34px}.steps{padding-top:0}.hero .actions .button{font-size:12px}}
 @media(max-width:420px){.hero h1{font-size:52px}.hero .photo{height:265px}.about-photography .editorial-image{height:225px}.service-photography .editorial-image{height:245px}.brand-photography .editorial-image{height:240px}.photo h2{font-size:30px}.brand-photography figcaption{font-size:27px}.hero .photo .eyebrow{display:none}}
 @media(prefers-reduced-motion:reduce){.editorial-image img{transition:none}}
+@media(max-width:800px){header{height:134px}nav{top:134px}}
+@media(max-width:360px){header{gap:6px}.nav-tools select{width:85px;max-width:85px;padding-left:3px;padding-right:18px}.menu{padding:6px}.logo .original-logo{width:140px;height:106px}.original-logo img{width:221.05px;left:-40.53px;top:-49.74px}}
