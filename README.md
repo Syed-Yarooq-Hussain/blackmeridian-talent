@@ -24,7 +24,9 @@ Photography is illustrative, with an explicit non-representation caption:
 - Kamilla Isalieva, photography: https://unsplash.com/photos/0D6ZJKOm25w
 - License: https://unsplash.com/license — free commercial use under the Unsplash license. No AI-generated imagery is used. Final brand use should retain the non-endorsement context and be reviewed with client-approved assets.
 
-Additional football, athletics, boxing and production photography should use client-approved originals; the initial layout prioritizes a balanced tennis/creator pair rather than unverified roster imagery.
+The updated editorial layout includes eight real photographs, equally split between sport and creator work. Additional image credits are maintained in `public/image-sources.json` and displayed in the website's photo credits. Football, athletics, boxing, film production, fashion preparation and on-set work now accompany the tennis and photographer hero pair. All remain illustrative, not a claimed talent roster.
+
+The November 2026 visual revision uses a near-black hero and talent section, a deep burgundy about section and footer, and eggshell service and business sections. `editorial.css` contains this visual layer. Source licenses were checked on the individual Unsplash pages.
 
 ## Implemented
 
